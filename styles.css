@@ -1,0 +1,204 @@
+.title {
+    color: green;
+}
+
+body{
+    font-family: Times New Roman, Times, serif;
+}
+
+h1, h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.default-theme{
+    --site-top-bottom-color: #FFF;
+    --site-background-color: #bbb;
+    --site-light-text: #FFF;
+    --site-dark-text: #000;
+    --sidepanel-color: #F49097;
+    --info-section-background: #ddd;
+    --info-panel-background: #FFF;
+    --info-panel-text-color: #000;
+    --info-panel-header-background: #F49097;
+    --info-panel-header-gradient-color: #F49097;
+}
+
+.main-wraper{
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 959px){
+    .main-wraper{
+        flex-direction: column-reverse;
+    }
+}
+
+@media (min-width: 960px){
+    .sidebar{
+        position: sticky;
+        height: 100vh;
+        top:0;
+        left:0;
+    }
+}
+
+.sidebar{
+    background-color: var(--sidepanel-color);
+}
+
+.sidebar-wraper{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h1{
+    padding: 0;
+    margin: 10px;
+    text-align: center;
+}
+
+.sidebar a{
+    min-height: 40px;
+    text-align: left;
+    border-bottom: 1px solid white;
+    padding: 5px 5px 0;
+    margin: 0 10px;
+    
+}
+
+.sidebar a:last-child{
+    border-bottom: none;
+}
+
+.sidebar a:hover{
+    background-color: #bf000020
+}
+
+.main-panel{
+    flex:1;
+    background-color: var(--site-background-color);
+    min-height: 100vh;
+}
+
+.main-panel h1{
+    padding: 0;
+    margin: 0;
+}
+
+.main-panel-wraper{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+}
+
+.main-panel-wraper header{
+    min-height: 50px;
+    background-color: var(--site-top-bottom-color);
+}
+
+.main-panel-wraper header h1{
+    text-align: center;
+}
+
+.main-panel-wraper footer{
+    min-height: 30px;
+    background-color: var(--site-top-bottom-color);
+}
+
+.info-panel-desk-wraper{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 20px;
+    gap:20px;
+}
+
+.info-section{
+    background-color: var(--info-section-background);
+    flex: 1 1 100%;
+    min-height: 100px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.info-section-wraper{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 20px;
+    gap:20px;
+}
+
+.info-section-wraper h2{
+    flex: 1 1 100%;
+    border-radius: 10px 10px 5px 5px;
+    background-image: linear-gradient(var(--info-panel-header-background),var(--info-panel-header-gradient-color));
+    font-size: 125%;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+}
+
+.info-panel{
+    background-color: var(--info-panel-background);
+    padding: 5px;
+    border-radius: 10px;
+    color: var(--info-panel-text-color);
+}
+
+.info-panel h2{
+    border-radius: 10px 10px 5px 5px;
+    background-image: linear-gradient(var(--info-panel-header-background),var(--info-panel-header-gradient-color));
+    font-size: 125%;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+}
+
+.info-panel p{
+    margin: 0;
+    text-indent: 15px;
+}
+
+.common-panel{
+    flex: 1 1 calc(50% - 60px);
+    min-height: 100px;
+    max-width: calc(50% - 20px);
+}
+
+.major-panel{
+    flex: 1 1 100%;
+    min-height: 100px;
+}
+
+.header-panel{
+    background-color: var(--info-panel-background);
+    flex: 1 1 100%;
+    border-radius: 10px 10px 0 0;
+    margin: 0 0 -10px;
+}
+
+.header-panel h2{
+    border-radius: 10px 10px 0 0;
+}
+
+.git-info{
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-image: url('images/Simpleicons-Github.png');
+}
+
+.image-box{
+    text-align: center;
+    width: 100%;
+    height: 300px;
+}
+
+.image-box img{
+    width: 100%;
+    height: calc(100% - 5px);
+    margin-top: 5px;
+    border-radius: 10px;
+    object-fit: cover;
+}
